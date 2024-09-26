@@ -106,3 +106,17 @@ int partition(List<int> list, int low, int high) {
 
   return i + 1;
 }
+
+bool isSorted(List<int> list) {
+  for (int i = 0; i < list.length - 1; i++) {
+    if (list[i] > list[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+// print('Bubble Sort sortiert korrekt: ${isSorted(bubbleSortList)}');
+// print('Merge Sort sortiert korrekt: ${isSorted(mergeSortList)}');
+// print('Quick Sort sortiert korrekt: ${isSorted(quickSortList)}');
